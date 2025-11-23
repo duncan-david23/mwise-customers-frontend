@@ -206,7 +206,7 @@ const Products = () => {
                 >
                   {/* Product Image */}
                   <div className={`relative ${viewMode === 'list' ? 'flex flex-col lg:flex-row lg:items-center lg:gap-6' : ''}`}>
-                    <div className={`relative overflow-hidden ${viewMode === 'list' ? 'lg:w-64 lg:flex-shrink-0 aspect-square' : 'aspect-[3/4]'}`}>
+                    <div className={`relative overflow-hidden ${viewMode === 'list' ? 'lg:w-64 lg:flex-shrink-0 aspect-square' : 'aspect-[4/4]'}`}>
                       <Link to={`/product/${product.id}`} className="block w-full h-full">
                         <img
                           src={product.product_images[0]}

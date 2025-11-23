@@ -150,12 +150,12 @@ const Home = () => {
                 whileHover={{ y: -5 }}
                 className="group cursor-pointer bg-white border border-gray-200  rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 "
               >
-                <div className="relative overflow-hidden  aspect-[3/4] ">
+                <div className="relative overflow-hidden  aspect-[4/4] ">
                   <Link to={`/product/${product.id}`}>
                     <img
                       src={product.product_images[0]}
                       alt={product.product_name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out md:mt-[1px] mt-[30px]"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out "
                     />
                   </Link>
                   
@@ -178,7 +178,7 @@ const Home = () => {
 
                 <div className="p-4">
                   <Link to={`/product/${product.id}`} className="block group">
-                    <h3 className="text-sm lg:text-base font-medium text-gray-900 mb-2 group-hover:text-gray-600 transition-colors line-clamp-2">
+                    <h3 className="text-sm lg:text-base font-medium text-gray-900  mb-2 group-hover:text-gray-600 transition-colors line-clamp-2">
                       {product.product_name}
                     </h3>
                   </Link>
