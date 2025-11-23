@@ -89,14 +89,14 @@ const ProductDetail = () => {
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`flex-1 h-20 rounded-lg overflow-hidden border-2 ${
+                  className={`flex-1 h-[180px] rounded-lg overflow-hidden border-2 ${
                     selectedImage === index ? 'border-black' : 'border-gray-200'
                   }`}
                 >
                   <img
                     src={image}
                     alt={`${product.product_name} ${index + 1}`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-[180px] object-cover"
                   />
                 </button>
               ))}

@@ -150,7 +150,7 @@ const Home = () => {
                 whileHover={{ y: -5 }}
                 className="group cursor-pointer bg-white border border-gray-200  rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 "
               >
-                <div className="relative overflow-hidden p-[20px] ">
+                <div className="relative overflow-hidden  aspect-[3/4] ">
                   <Link to={`/product/${product.id}`}>
                     <img
                       src={product.product_images[0]}
