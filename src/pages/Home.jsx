@@ -464,6 +464,7 @@ const Home = () => {
             <div className="flex justify-center gap-8">
               <motion.a
                 href="https://www.tiktok.com/@mr.whise6"
+                target="_blank"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
               >
@@ -471,6 +472,7 @@ const Home = () => {
               </motion.a>
               <motion.a
                 href="https://chat.whatsapp.com/HDZYEFaUwlDCOXhe32TRS1?mode=wwt"
+                target="_blank"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
               >

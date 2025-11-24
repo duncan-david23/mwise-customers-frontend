@@ -24,7 +24,7 @@ const Products = () => {
   } = useProducts();
 
   const handleWhatsAppOrder = (product) => {
-    const message = `Hello! I would like to order:\n\n*${product.name}*\nPrice: GHC${product.price}\n\nPlease proceed with my order.`;
+    const message = `Hello! I would like to order:\n\n*${product.product_name}*\nPrice: GHC${product.product_price}\n\nPlease proceed with my order.`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/233533261002?text=${encodedMessage}`, '_blank');
   };
