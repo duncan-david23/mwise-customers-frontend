@@ -25,10 +25,12 @@ export const ProductsProvider = ({ children }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("featured");
   const [searchQuery, setSearchQuery] = useState("");
+    const [loading, setLoading] = useState(false);
 
   // Fetch products from backend
   useEffect(() => {
     const fetchProducts = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           "https://mwsie-backend.onrender.com/api/ecommerce/products"
@@ -37,6 +39,8 @@ export const ProductsProvider = ({ children }) => {
         
       } catch (err) {
         console.error("❌ Error fetching products:", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -115,6 +119,7 @@ export const ProductsProvider = ({ children }) => {
     getFeaturedProducts,
     getRelatedProducts,
     getProductsByCategory,
+    loading,
   };
 
   return (

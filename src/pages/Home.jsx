@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Motorbike, Shield, TrendingUp, Instagram, Facebook, ShoppingCart, MessageCircle } from 'lucide-react';
@@ -10,14 +10,15 @@ import whatsappIcon from '../assets/whatsapp.png';
 import tikTokIcon from '../assets/tiktok.png';
 
 const Home = () => {
-  const { getFeaturedProducts } = useProducts();
+  const { getFeaturedProducts, loading } = useProducts();
   const { addToCart } = useCart();
   const featuredProducts = getFeaturedProducts();
+
 
   const handleWhatsAppOrder = (product) => {
     const message = `Hello! I would like to order:\n\n*${product.product_name}*\nPrice: GHC${product.product_price}\n\nPlease proceed with my order.`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/233556664343?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/233533261002?text=${encodedMessage}`, '_blank');
   };
 
   const containerVariants = {
@@ -141,6 +142,11 @@ const Home = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {loading && (
+              <div className="col-span-4 text-center py-12">
+                <p className="text-gray-500">Loading products...</p>
+              </div>
+            )}
             {featuredProducts.map((product, index) => (
               <motion.div
                 key={product.id}
@@ -457,14 +463,14 @@ const Home = () => {
             </p>
             <div className="flex justify-center gap-8">
               <motion.a
-                href="#"
+                href="https://www.tiktok.com/@mr.whise6"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
               >
                 <img src={tikTokIcon} alt="Social Icon" className="w-5 h-5" />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://chat.whatsapp.com/HDZYEFaUwlDCOXhe32TRS1?mode=wwt"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
               >

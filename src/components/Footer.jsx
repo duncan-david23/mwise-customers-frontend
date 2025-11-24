@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Premium designer tshirts, sneakers, and accessories for the fashion-forward individual.
             </p>
-            <div className="flex text-center justify-center gap-[10px]">
+            {/* <div className="flex text-center justify-center gap-[10px]">
               <div>
                 <a href="#" className="text-gray-400 hover:text-black transition-colors">
                 <Facebook size={20} />
@@ -40,7 +40,7 @@ const Footer = () => {
                   <Mail size={20} />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

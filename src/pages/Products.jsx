@@ -19,13 +19,14 @@ const Products = () => {
     sortBy,
     setSortBy,
     searchQuery,
-    setSearchQuery
+    setSearchQuery,
+    loading,
   } = useProducts();
 
   const handleWhatsAppOrder = (product) => {
     const message = `Hello! I would like to order:\n\n*${product.name}*\nPrice: GHC${product.price}\n\nPlease proceed with my order.`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/233556664343?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/233533261002?text=${encodedMessage}`, '_blank');
   };
 
   const sortOptions = [
@@ -197,6 +198,11 @@ const Products = () => {
                   : 'grid grid-cols-1 gap-6 lg:gap-8'
               }
             >
+                {loading && (
+              <div className="col-span-4 text-center py-12">
+                <p className="text-gray-500">Loading products...</p>
+              </div>
+            )}
               {filteredProducts?.map((product, index) => (
                 <motion.div
                   key={product.id}

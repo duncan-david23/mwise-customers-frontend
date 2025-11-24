@@ -24,7 +24,7 @@ const Cart = () => {
     message += "Please proceed with my order. Thank you!";
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/233556664343?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/233533261002?text=${encodedMessage}`, '_blank');
   };
 
   if (cart.items.length === 0) {
